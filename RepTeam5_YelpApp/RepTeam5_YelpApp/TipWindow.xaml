@@ -1,0 +1,19 @@
+﻿<Window x:Class="RepTeam5_YelpApp.TipWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RepTeam5_YelpApp"
+        mc:Ignorable="d"
+        Title="TipWindow" Height="400" Width="600">
+    <Grid>
+        <DataGrid x:Name="tipsGrid" HorizontalAlignment="Left" Height="370" Margin="0,0,-0.4,0.4" VerticalAlignment="Bottom" Width="594" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Text" Binding="{Binding text}" Width="360"/>
+                <DataGridTextColumn Header="Date" Binding ="{Binding date, StringFormat=\{0:dd/MM/yy\}}" Width="100"/>
+                <DataGridTextColumn Header="Likes" Binding="{Binding likes}" Width="64"/>
+                <DataGridTextColumn Header="User" Binding="{Binding userName}" Width="64"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
